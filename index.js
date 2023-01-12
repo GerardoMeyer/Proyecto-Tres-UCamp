@@ -1,46 +1,54 @@
-// setup 
-const data = {
-    labels: ['Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat', 'Sun'],
-    datasets: [{
-        label: 'Ventas semanales',
-        data: [10, 7, 6, 9, 12, 3, 9],
-        backgroundColor: [
-            'rgba(255, 26, 104, 0.2)',
-            'rgba(54, 162, 235, 0.2)',
-            'rgba(255, 206, 86, 0.2)',
-            'rgba(75, 192, 192, 0.2)',
-            'rgba(153, 102, 255, 0.2)',
-            'rgba(255, 159, 64, 0.2)',
-            'rgba(0, 0, 0, 0.2)'
-        ],
-        borderColor: [
-        'rgba(255, 26, 104, 1)',
-        'rgba(54, 162, 235, 1)',
-        'rgba(255, 206, 86, 1)',
-        'rgba(75, 192, 192, 1)',
-        'rgba(153, 102, 255, 1)',
-        'rgba(255, 159, 64, 1)',
-        'rgba(0, 0, 0, 1)'
-        ],
-        borderWidth: 1
-    }]
-    };
+// Promedio
+let alturaPromedio = []
+let pesoPromedio = []
+let sumaAltura = 0
 
-  // config 
-    const config = {
-    type: 'bar',
-    data,
-    options: {
-        scales: {
-        y: {
-            beginAtZero: true
-        }
-        }
+console.log(alturaPromedio.length)
+
+// Random
+function getRandomInt() {
+    return Math.round(Math.floor(Math.random() * 82));
+}
+
+function getAltura(sumaAltura) {
+    for (i = 0; i < alturaPromedio.length; i++) {
+        sumaAltura += alturaPromedio[i]
+        //divisor += 1
     }
-    };
+    return sumaAltura
+}
 
-  // render init block
-const myChart = new Chart(
-    document.getElementById('myChart'),
-    config
-);
+
+// Api
+function clickMe() {
+    console.log(getRandomInt(82));
+    let personaje = getRandomInt()
+
+    fetch(`https://swapi.dev/api/people/${personaje}/`)
+        .then((respuesta) => respuesta.json())
+        .then((result) => {
+            console.log('el resultado ', result);
+            // AQUÍ CÓDIGO
+            let peso = parseFloat(result.mass)
+            let altura = parseFloat(result.height)
+            console.log(peso)
+            console.log(altura)
+            alturaPromedio.push(altura)
+            // pesoPromedio.push(peso)
+
+            let numerador = getAltura(sumaAltura)
+            let divisor = alturaPromedio.length
+
+            console.log(`Denominador ${divisor}`)
+            console.log(`Promedio: ${numerador / divisor}`)
+            // console.log(pesoPromedio)
+
+
+
+
+
+        })
+        .catch(error => {
+            console.log('no existe tu personaje', error);
+        })
+}
