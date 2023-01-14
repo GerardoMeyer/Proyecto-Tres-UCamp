@@ -41,18 +41,14 @@ nav li {
 }
 
 
-nav a {
+/*nav a {
     text-transform: uppercase;
     color: whitesmoke;
     font-weight: bold;
     font-size: 22px;
     text-decoration: none;
-}*/   
-
-nav a:hover {
-    color: yellow;
-    text-decoration: underline;
 }
+
 
 /*Estilos Main*/
 

@@ -14,7 +14,7 @@ function clickMe() {
         .then((respuesta) => respuesta.json())
         .then((result) => {
             console.log('el resultado ', result);
-            // AQUÍ CÓDIGO
+            // AQUÍ SE LLAMA A LOS ARRAYS
             let alturaPromedio = []
             let pesoPromedio = []
 
@@ -31,17 +31,6 @@ function clickMe() {
             alturaPromedio.push(altura)
             pesoPromedio.push(peso)
 
-            // // Altura
-            // let numerador = getAltura(sumaAltura)
-            // let divisor = alturaPromedio.length
-
-            // // Peso
-            // let numeradorPeso = getPeso(sumaPeso)
-            // let divisorPeso = pesoPromedio.length
-
-            // console.log(`Denominador ${divisor}`)
-            // console.log(`Promedio altura: ${numerador / divisor}`)
-            // console.log(`Promedio peso: ${numeradorPeso / divisorPeso}`)
 
             // Cartas
             let contenedorPadre = document.querySelector('.contenedorCartas')
