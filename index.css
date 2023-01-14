@@ -49,11 +49,6 @@ nav a {
     text-decoration: none;
 }
 
-nav a:hover {
-    color: yellow;
-    text-decoration: underline;
-}
-
 /*Estilos Main*/
 
 main {
