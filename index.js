@@ -54,26 +54,24 @@ function clickMe() {
             contenedorPadre.appendChild(nuevaCarta)
 
 
-            // Graficos JChart
-            // Obtener una referencia al elemento canvas del DOM
-            // Obtener una referencia al elemento canvas del DOM
+        
             const $grafica = document.querySelector(".graficaPrueba");
-            // Las etiquetas son las que van en el eje X. 
+          
             const etiquetas = ["Peso - Altura"]
-            // Podemos tener varios conjuntos de datos
+            
             const datosPeso = {
                 label: "Peso",
-                data: pesoPromedio, // La data es un arreglo que debe tener la misma cantidad de valores que la cantidad de etiquetas
-                backgroundColor: 'rgba(54, 162, 235, 0.2)', // Color de fondo
-                borderColor: 'rgba(54, 162, 235, 1)', // Color del borde
-                borderWidth: 1, // Ancho del borde
+                data: pesoPromedio, 
+                backgroundColor: 'rgba(54, 162, 235, 0.2)', 
+                borderColor: 'rgba(54, 162, 235, 1)', 
+                borderWidth: 1, 
             };
             const datosAltura = {
                 label: "Altura",
-                data: alturaPromedio, // La data es un arreglo que debe tener la misma cantidad de valores que la cantidad de etiquetas
-                backgroundColor: 'rgba(255, 159, 64, 0.2)', // Color de fondo
-                borderColor: 'rgba(255, 159, 64, 1)', // Color del borde
-                borderWidth: 1, // Ancho del borde
+                data: alturaPromedio, 
+                backgroundColor: 'rgba(255, 159, 64, 0.2)', 
+                borderColor: 'rgba(255, 159, 64, 1)', 
+                borderWidth: 1, 
             };
 
             if (myChart) {
