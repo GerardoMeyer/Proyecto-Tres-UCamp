@@ -14,7 +14,7 @@ function clickMe() {
         .then((respuesta) => respuesta.json())
         .then((result) => {
             console.log('el resultado ', result);
-            // AQUÍ CÓDIGO
+            // AQUÍ SE LLAMA A LOS ARRAYS
             let alturaPromedio = []
             let pesoPromedio = []
 
