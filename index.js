@@ -1,4 +1,4 @@
-// Promedio
+
 let myChart;
 
 // Random número para personajes
