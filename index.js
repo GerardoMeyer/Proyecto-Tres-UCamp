@@ -1,10 +1,14 @@
+import primeraLetraMayuscula from './funcion.js'
+
 // Promedio
 let myChart;
+
 
 // Random número para personajes
 function getRandomInt() {
     return Math.round(Math.floor(Math.random() * 81));
 }
+
 
 // Api
 function clickMe() {
@@ -64,7 +68,6 @@ function clickMe() {
                             `
             contenedorPadre.appendChild(nuevaCarta)
 
-
             // Graficos JChart
             // Obtener una referencia al elemento canvas del DOM
             // Obtener una referencia al elemento canvas del DOM
@@ -119,9 +122,8 @@ function clickMe() {
         })
 }
 
-// Primer letra mayúscula función
-let primeraLetraMayuscula = (cadena) => {
-    let primerCaracter = cadena.charAt(0).toUpperCase();
-    let restoDeLaCadena = cadena.substring(1, cadena.length);
-    return primerCaracter.concat(restoDeLaCadena);
-}
+
+window.clickMe = clickMe;
+
+
+

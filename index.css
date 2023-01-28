@@ -84,7 +84,7 @@ main h2 {
 
 .cartaPersonaje {
     background: rgb(255, 245, 0);
-    background: radial-gradient(circle, rgba(255, 247, 0, 0.449) 0%, rgba(255, 138, 0, 1) 100%);
+    background: radial-gradient(circle, rgba(255, 245, 0, 0.8173534062062324) 0%, rgba(255, 138, 0, 1) 100%);
 }
 
 .card-title {
