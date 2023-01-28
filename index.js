@@ -1,10 +1,7 @@
-<<<<<<< HEAD
+
 import primeraLetraMayuscula from './funcion.js'
 
 // Promedio
-=======
-
->>>>>>> 9a5f48e94261bff170f8d200f6e4fd064e909ac0
 let myChart;
 
 
@@ -61,14 +58,6 @@ function clickMe() {
                             `
             contenedorPadre.appendChild(nuevaCarta)
 
-<<<<<<< HEAD
-            // Graficos JChart
-            // Obtener una referencia al elemento canvas del DOM
-            // Obtener una referencia al elemento canvas del DOM
-=======
-
-        
->>>>>>> 9a5f48e94261bff170f8d200f6e4fd064e909ac0
             const $grafica = document.querySelector(".graficaPrueba");
           
             const etiquetas = ["Peso - Altura"]
